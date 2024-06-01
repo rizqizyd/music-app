@@ -1,0 +1,15 @@
+{
+  "home": {
+    "listen": "Dengarkan Musik Hebat!"
+  },
+  "manage": {
+    "my_songs": "Musik Saya"
+  },
+  "register": {
+    "TOS": "",
+    "accept": ""
+  },
+  "song": {
+    "comment_count": "No comments | 1 Comment |  {count} Comments"
+  }
+}
