@@ -7,12 +7,13 @@
     </transition>
   </router-view>
 
-  <app-player />
+  <app-player v-if="duration !== '00:00'" />
 
   <auth-modal />
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex';
 import AppHeader from './components/Header.vue';
 import AuthModal from './components/Auth.vue';
 import AppPlayer from './components/Player.vue';
@@ -26,6 +27,10 @@ export default {
   },
   created() {
     this.$store.dispatch('init_login');
+  },
+  computed: {
+    ...mapGetters(['playing']),
+    ...mapState(['seek', 'duration', 'playerProgress', 'currentSong']),
   },
 };
 </script>

@@ -1,6 +1,14 @@
 {
+  "navbar": {
+    "about": "Tentang",
+    "manage": "Atur",
+    "logout": "Keluar",
+    "login": "Masuk / Daftar"
+  },
   "home": {
-    "listen": "Dengarkan Musik Hebat!"
+    "listen": "Dengarkan Musik Hebat!",
+    "description": "Temukan suara dan irama luar biasa yang menginspirasi, memberi energi, dan menyemangati. Nikmati pengalaman mendengarkan yang mulus kapan saja, di mana saja. Bergabunglah dengan komunitas pecinta musik kami dan biarkan musik mengubah momen Anda. Dengarkan, santai, dan nikmati musiknya!",
+    "songs": "Lagu"
   },
   "manage": {
     "my_songs": "Musik Saya"

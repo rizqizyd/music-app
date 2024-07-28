@@ -4,9 +4,10 @@
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
       <!-- App Name -->
-      <router-link class="text-white font-bold uppercase text-2xl mr-4" 
+      <router-link class="flex gap-2 items-center text-white font-bold uppercase text-2xl mr-4" 
       :to="{ name: 'home' }" exact-active-class="no-active">
-        Music
+        <img src="/assets/img/music-app.jpeg" alt="logo" class="h-12 w-[50px] object-cover">
+        Music App
       </router-link>
 
       <div class="flex flex-grow items-center">
@@ -15,32 +16,35 @@
           <!-- Navigation Links -->
           <li>
             <router-link class="px-2 text-white" to="/about">
-              About
+              {{ $t("navbar.about") }}
             </router-link>
           </li>
+          <li>
+            <a v-if="!userLoggedIn" class="px-2 text-white cursor-pointer" @click.prevent="toggleAuthModal">
+              {{ $t("navbar.manage") }}
+            </a>
+            <router-link v-else class="px-2 text-white" :to="{name: 'manage'}">
+              {{ $t("navbar.manage") }}
+            </router-link>
+            </li>
+        </ul>
+        <ul class="flex flex-row mt-1 ml-auto">
+          <!-- <li>
+            <a href="#" class="px-2 text-white" @click.prevent="changeLocale">
+              {{ currentLocale }}
+            </a>
+          </li> -->
           <li v-if="!userLoggedIn">
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">
-              Login / Register
+              {{ $t("navbar.login") }}
             </a>
           </li>
           <template v-else>
             <li>
-              <router-link class="px-2 text-white" :to="{name: 'manage'}">
-                Manage
-              </router-link>
-            </li>
-            <li>
               <a class="px-2 text-white" href="#"
-                @click.prevent="signout">Logout</a>
+                @click.prevent="signout">{{ $t("navbar.logout") }}</a>
             </li>
           </template>
-        </ul>
-        <ul class="flex flex-row mt-1 ml-auto">
-          <li>
-            <a href="#" class="px-2 text-white" @click.prevent="changeLocale">
-              {{ currentLocale }}
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

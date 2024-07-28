@@ -75,6 +75,8 @@ router.beforeEach((to, from, next) => {
   console.log('Global Guard');
   // console.log(to.matched);
   // console.log(to, from); // global guard
+  const baseTitle = 'Music App';
+  document.title = to.meta.title ? `${to.meta.title} | ${baseTitle}` : baseTitle;
 
   // check if the current route requires authentication by using these some function.
   // If none of the records have the requires of property, we will let them proceed.

@@ -1,6 +1,14 @@
 {
+  "navbar": {
+    "about": "About",
+    "manage": "Manage",
+    "logout": "Logout",
+    "login": "Login / Register"
+  },
   "home": {
-    "listen": "Listen to Great Music!"
+    "listen": "Listen to Great Music!",
+    "description": "Discover incredible sounds and rhythms that inspire, energize, and uplift. Enjoy a seamless listening experience anytime, anywhere. Join our community of music lovers and let the music transform your moments. Tune in, relax, and enjoy the music!",
+    "songs": "Songs"
   },
   "manage": {
     "my_songs": "My Songs"

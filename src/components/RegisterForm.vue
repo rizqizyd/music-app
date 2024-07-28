@@ -59,6 +59,7 @@
       <vee-field as="select" name="country"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
           duration-500 focus:outline-none focus:border-black rounded">
+        <option value="Indonesia">Indonesia</option>
         <option value="USA">USA</option>
         <option value="Mexico">Mexico</option>
         <option value="Germany">Germany</option>
@@ -101,7 +102,7 @@ export default {
         tos: 'tos',
       },
       userData: {
-        country: 'USA',
+        country: 'Indonesia',
       },
       reg_in_submission: false,
       reg_show_alert: false,
